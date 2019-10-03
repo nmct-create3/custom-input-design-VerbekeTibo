@@ -688,6 +688,21 @@ input::placeholder {
   box-shadow: none;
 }
 
+.c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
+}
+.c-custom-option__fake-input {
+  display: flex;
+  height: calc(var(--global-baseline) * 2);
+  width: calc(var(--global-baseline) * 2);
+  border: var(--global-borderWidth) solid var(--global-input-borderColor);
+  margin-right: var(--global-whitespace-sm);
+}
+.c-custom-option__fake-input--checkbox .c-custom-option__symbol {
+  opacity: 0;
+}
+.c-custom-option__fake-input--radio .c-custom-option__symbol {
+}
+
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
