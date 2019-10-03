@@ -656,7 +656,7 @@ input::placeholder {
 }
 
 .c-option-list__item {
-  margin-bottom: calc(var(--global-baseline)/2*3);
+  margin-bottom: calc(var(--global-baseline) / 2 * 3);
 }
 /*
     Component: Button
@@ -742,12 +742,11 @@ input::placeholder {
   box-shadow: var(--global-input-focus-boxShadow);
 }
 
-.c-custom-toggle__fake-input{
-    width: 48px;
-    height: 24px;
-    border: var(--global-borderWidth) solid var(--global-input-borderColor);
-    margin-right: var(--global-whitespace-sm);
-
+.c-custom-toggle__fake-input {
+  width: 48px;
+  height: 24px;
+  border: var(--global-borderWidth) solid var(--global-input-borderColor);
+  margin-right: var(--global-whitespace-sm);
 }
 
 /*------------------------------------*\
