@@ -753,14 +753,14 @@ input::placeholder {
   margin-right: var(--global-whitespace-sm);
   transition: all var(--global-transitionTiming-alpha);
   background-color: var(--global-color-neutral-xxx-light);
-  opacity: 1;
+  margin-right: 0px;
 }
 .c-custom-toggle__fake-input::after {
   content: '';
   width: 22px;
   height: 22px;
   border-radius: 22px;
-  display: block;
+  display: flex;
   border: var(--global-borderWidth) solid var(--global-input-borderColor);
   transition: all var(--global-transitionTiming-alpha);
   background-color: white;
@@ -784,6 +784,17 @@ input::placeholder {
 
 .c-option--hidden:active:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
   margin-left: -4px;
+}
+
+.c-custom-toggle__label--inverted {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+.c-custom-select__symbol{
+  width: 24px;
+  height: 24px;
+  fill: #b5b6c0;
 }
 
 /*----------------------------------*\
