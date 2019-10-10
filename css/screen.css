@@ -13,11 +13,6 @@
   font-weight: 600;
   src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
 }
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--color-neutral-xxxx-dark);
-  }
-}
 
 /*------------------------------------*\
 #Variables
@@ -72,12 +67,7 @@
   --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
   --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --global-page-color: White;
-    --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
-  }
-}
+
 /*------------------------------------*\
 #GENERIC
 \*------------------------------------*/
@@ -98,6 +88,7 @@ html {
   color: var(--global-page-color);
   background-color: var(--global-page-backgroundColor);
 }
+
 @media (prefers-color-scheme: dark) {
   html {
     background-color: var(--color-neutral-xxxx-dark);
@@ -539,15 +530,28 @@ input::placeholder {
 }
 
 .c-logo__path--1 {
-  fill: var(--global-color-neutral-xxxx-dark);
+  fill: var(--logo__path--1--fill, var(--global-color-neutral-xxxx-dark));
 }
 
 .c-logo__path--2 {
-  fill: var(--global-color-alpha);
+  fill: var(--logo__path--2--fill, var(--global-color-alpha));
 }
 
 .c-logo__path--3 {
-  fill: var(--color-alpha-x-dark);
+  fill: var(--logo__path--3--fill, var(--global-color-alpha-x-dark));
+}
+@media (prefers-color-scheme: dark) {
+  .c-logo {
+    --logo__path--1--fill: White;
+    --logo__path--2--fill: var(--logo__path--1--fill);
+    --logo__path--3--fill: var(--logo__path--1--fill);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--global-color-neutral-xxxx-dark);
+    color: white;
+  }
 }
 
 /*
@@ -598,6 +602,23 @@ input::placeholder {
 
   .c-card__title {
     margin-bottom: var(--global-whitespace-xl);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-card__body {
+    background-color: var(--global-color-neutral-xxx-dark);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .c-card__footer {
+    background-color: var(--global-color-neutral-xxx-dark);
+    border-top-color: var(--global-color-neutral-xxxx-dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-card {
+    background-color: var(--global-color-neutral-xxxx-dark);
   }
 }
 
@@ -682,6 +703,17 @@ input::placeholder {
     ---
     Class to put on form buttons or
 */
+@media (prefers-color-scheme: dark) {
+  .c-label {
+    color: var(--global-color-neutral-x-light);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-input {
+    background-color: var(--global-color-neutral-xxxx-dark);
+    border-color: var(--global-color-neutral-xxxx-dark);
+  }
+}
 
 .c-button {
   font-size: 16px;
@@ -814,6 +846,12 @@ input::placeholder {
   fill: #b5b6c0;
 }
 
+@media (prefers-color-scheme: dark) {
+  .c-custom-option__fake-input--checkbox {
+    background-color: var(--global-color-neutral-xxxx-dark);
+    border-color: var(--global-color-neutral-xxxx-dark);
+  }
+}
 /*----------------------------------*\
 #UTILITIES
 \*------------------------------------*/
