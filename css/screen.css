@@ -13,6 +13,11 @@
   font-weight: 600;
   src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-neutral-xxxx-dark);
+  }
+}
 
 /*------------------------------------*\
 #Variables
@@ -20,6 +25,8 @@
 
 :root {
   /* colors */
+  --global-page-color: var(--color-neutral-xxxx-dark);
+  --global-page-backgroundColor: var(--color-neutral-xxxx-light);
   --global-color-alpha-light: #4f95ff;
   --global-color-alpha: #3385ff;
   --global-color-alpha-dark: #2e77e6;
@@ -65,7 +72,12 @@
   --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
   --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
 }
-
+@media (prefers-color-scheme: dark) {
+  :root {
+    --global-page-color: White;
+    --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
+  }
+}
 /*------------------------------------*\
 #GENERIC
 \*------------------------------------*/
@@ -80,11 +92,16 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Inter Web', Helvetica, arial, sans-serif;
-  color: var(--global-color-neutral-xxxx-dark);
-  background-color: var(--global-color-neutral-xxxx-light);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--global-page-color);
+  background-color: var(--global-page-backgroundColor);
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-neutral-xxxx-dark);
+  }
 }
 
 *,
@@ -791,7 +808,7 @@ input::placeholder {
   justify-content: space-between;
   width: 100%;
 }
-.c-custom-select__symbol{
+.c-custom-select__symbol {
   width: 24px;
   height: 24px;
   fill: #b5b6c0;
