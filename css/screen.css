@@ -604,23 +604,6 @@ input::placeholder {
     margin-bottom: var(--global-whitespace-xl);
   }
 }
-@media (prefers-color-scheme: dark) {
-  .c-card__body {
-    background-color: var(--global-color-neutral-xxx-dark);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .c-card__footer {
-    background-color: var(--global-color-neutral-xxx-dark);
-    border-top-color: var(--global-color-neutral-xxxx-dark);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-card {
-    background-color: var(--global-color-neutral-xxxx-dark);
-  }
-}
 
 /*
     Component: Forms
@@ -703,17 +686,6 @@ input::placeholder {
     ---
     Class to put on form buttons or
 */
-@media (prefers-color-scheme: dark) {
-  .c-label {
-    color: var(--global-color-neutral-x-light);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .c-input {
-    background-color: var(--global-color-neutral-xxxx-dark);
-    border-color: var(--global-color-neutral-xxxx-dark);
-  }
-}
 
 .c-button {
   font-size: 16px;
@@ -846,12 +818,6 @@ input::placeholder {
   fill: #b5b6c0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .c-custom-option__fake-input--checkbox {
-    background-color: var(--global-color-neutral-xxxx-dark);
-    border-color: var(--global-color-neutral-xxxx-dark);
-  }
-}
 /*----------------------------------*\
 #UTILITIES
 \*------------------------------------*/
@@ -1252,5 +1218,53 @@ No media query since this is the default in mobile first design
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-custom-option__fake-input--checkbox {
+    background-color: var(--global-color-neutral-xxxx-dark);
+    border-color: var(--global-color-neutral-xxxx-dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-label {
+    color: var(--global-color-neutral-x-light);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-input {
+    background-color: var(--global-color-neutral-xxxx-dark);
+    border-color: var(--global-color-neutral-xxxx-dark);
+    color: var(--global-color-neutral-x-light);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-card__body {
+    background-color: var(--global-color-neutral-xxx-dark);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .c-card__footer {
+    background-color: var(--global-color-neutral-xxx-dark);
+    border-top-color: var(--global-color-neutral-xxxx-dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-card {
+    background-color: var(--global-color-neutral-xxxx-dark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-logo {
+    --logo__path--1--fill: White;
+    --logo__path--2--fill: var(--logo__path--1--fill);
+    --logo__path--3--fill: var(--logo__path--1--fill);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--global-color-neutral-xxxx-dark);
+    color: white;
   }
 }
