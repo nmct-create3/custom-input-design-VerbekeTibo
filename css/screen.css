@@ -761,7 +761,11 @@ input::placeholder {
 
 .c-option--hidden:focus + .c-custom-option .c-custom-option__fake-input,
 .c-option--hidden:active + .c-custom-option .c-custom-option__fake-input {
-  border-color: var(--global-input-borderColor);
+  border-color: var(--global-input-focus-borderColor);
+  box-shadow: var(--global-input-focus-boxShadow);
+}
+.c-option--hidden:hover + .c-custom-option .c-custom-option__fake-input {
+  border-color: var(--global-input-hover-borderColor);
   box-shadow: var(--global-input-focus-boxShadow);
 }
 
